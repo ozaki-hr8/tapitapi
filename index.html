@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfiWmP8Yern4QjxxoaGTCf0tbHxKAoBy4"></script>
+    <script src="map.js"></script>
+    <title>タピタピ | 混雑検索サイト</title>
+  </head>
+
+  <div id="header">
+    <div id="header-container">
+           <div class="logo"><img class="logo-image" src="tapitapi_logo.png"></div>
+           <div class="header-right">マイページ&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ozaki-hr8.github.io/tapitapi/index2.html" target="_blank">お店の方はこちら</a><img src="Food_aeration-512.png" style="width:30px;"></div>
+    </div>
+  </div>
+
+  <body>
+  <div class="leftnav">
+    <button class="button1">混雑状況の表示</button>
+    <div class="button1">店舗一覧</div>
+    <div class="mypage">あなたのタピポイントは<br><br><br><br><div id="edit_area">525pt</div><br><br><br><br>です<br><br><div class="button2">タピオカと交換する</div></div>
+    <button class="login" onclick="getPoint()">1タップ<br>1ポイント</button>
+  </div>
+
+  <div class="mainarea">
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8405.432361383813!2d135.76483562054426!3d35.00242300031979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd972c7b65ad9a257!2zVEhFIEFMTEVZ77yI44K4IOOCouODrOOCpO-8ieS6rOmDveWbm-adoeW6lw!5e0!3m2!1sja!2sjp!4v1597718614275!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+    <div id="map"></div>
+    <div class="case">店舗情報<br><br><img src="tapi1.jpeg"><div class="siteinfo" style="float:right; margin-right:4%;">THE ALLEY（ジ アレイ）京都四条店<br>〒604-8143 京都府京都市中京区阪東屋町 ６５５TKビル</div><br><br>メニュー<br><br><img src="tapimenu.jpg" width="500px"></div>
+  </div>
+
+  <div class="rightnav">
+<a class="twitter-timeline" data-height="983" href="https://twitter.com/sisters_tapioca?ref_src=twsrc%5Etfw">Tweets by sisters_tapioca</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+
+  <div id="footer">
+    <img class="logo-image" src="tapitapi_logo.png"><br>
+    Copyright©2020 TapiTapi Inc. All Rights Reserved
+  </div>
+  <script type="text/javascript">
+    var tapipoint=525;
+
+    function getPoint(){
+    tapipoint+=1;
+    document.getElementById('edit_area').innerHTML = tapipoint+"pt";
+    }
+
+  </script>
+  </body>
+  </html>
+
+  <style>
+  #map{
+   margin: 0 auto;
+   width:700px; /* 横幅 */
+   height:500px; /* 縦幅 */
+ 　}
+  @media (max-width: 1050px) and (min-width: 768px){
+   #map{
+    margin: 0 auto;
+    width:500px; /* 横幅 */
+    height:400px; /* 縦幅 */
+  　}
+  }
+  button.button1{
+    color:#543c27;
+    text-align:center;
+    background-color: white;
+    margin: 0% 10%;
+    border-radius: 5px;
+    margin-bottom:10%;
+    padding: 0% 20%;
+  }
+  </style>
